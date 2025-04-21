@@ -72,7 +72,7 @@ console.log('-------------------------------------------------------------------
 // Verwacht antwoord:
 // 5
 
-console.log(movies.length-1)
+console.log(movies.length - 1)
 
 console.log('------------------------------------------------------------------------------')
 // Opdracht 2c: Log het laatste object in de 'movies' array. Let op: wanneer de array langer of korter wordt, moet dit nog steeds werken!
@@ -114,10 +114,18 @@ console.log(movies[5].actors[2])
 console.log('------------------------------------------------------------------------------')
 // Opdracht 4a: Maak een if-else-statement die het woord 'Uitstekende film!!' logt,
 
-// if ('film'!= movies[{title}]) {
-//     console.log('Uitstekende film')
-//
-// }
+if (movies.rating >= 6) {
+    console.log('Okey film');
+} else {
+    if (movies.rating >= 8) {
+        console.log('goede film');
+    } else {
+        if (movies.rating > 8) {
+            console.log('Uitstekende film');
+
+        }
+    }
+}
 
 
 // wanneer een film een hoger cijfer krijgt dan een 8 en het woord 'Goede film!' logt, wanneer deze lager is.
@@ -125,9 +133,8 @@ console.log('-------------------------------------------------------------------
 // om te kijken of je algoritme ook werkt wanneer je een andere film selecteert!
 
 // const selectedMovie = movies[0];
-// for (let i = 0; i < 11; i++)
-//     if(movies[i].title)
-
+// for (movies.rating > 8 && movies)
+//     console.log(movies.rating)
 
 console.log('------------------------------------------------------------------------------')
 // Verwacht antwoord bij 'const selectedMovie = movies[0]':
