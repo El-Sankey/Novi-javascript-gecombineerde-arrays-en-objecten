@@ -1,41 +1,34 @@
-const movies = [
-    {
-        title: "The Shawshank Redemption",
-        releaseDate: 1994,
-        rating: 9.2,
-        actors: ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
-    },
-    {
-        title: "The Godfather",
-        releaseDate: 1972,
-        rating: 9.2,
-        actors: ["Marlon Brando", "Al Pacino", "James Caan"]
-    },
-    {
-        title: "The Dark Knight",
-        releaseDate: 2008,
-        rating: 8.5,
-        actors: ["Christian Bale", "Heath Ledger", "Gary Oldman"]
-    },
-    {
-        title: "Pulp Fiction",
-        releaseDate: 1994,
-        rating: 7.8,
-        actors: ["John Travolta", "Samuel L. Jackson", "Uma Thurman"]
-    },
-    {
-        title: "The Lord of the Rings: The Return of the King",
-        releaseDate: 2003,
-        rating: 8.9,
-        actors: ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"]
-    },
-    {
-        title: "12 Angry Men",
-        releaseDate: 1957,
-        rating: 6.2,
-        actors: ["Henry Fonda", "Lee J. Cobb", "Martin Balsam"]
-    }
-];
+const movies = [{
+    title: "The Shawshank Redemption",
+    releaseDate: 1994,
+    rating: 9.2,
+    actors: ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
+}, {
+    title: "The Godfather",
+    releaseDate: 1972,
+    rating: 9.2,
+    actors: ["Marlon Brando", "Al Pacino", "James Caan"]
+}, {
+    title: "The Dark Knight",
+    releaseDate: 2008,
+    rating: 8.5,
+    actors: ["Christian Bale", "Heath Ledger", "Gary Oldman"]
+}, {
+    title: "Pulp Fiction",
+    releaseDate: 1994,
+    rating: 7.8,
+    actors: ["John Travolta", "Samuel L. Jackson", "Uma Thurman"]
+}, {
+    title: "The Lord of the Rings: The Return of the King",
+    releaseDate: 2003,
+    rating: 8.9,
+    actors: ["Elijah Wood", "Ian McKellen", "Viggo Mortensen"]
+}, {
+    title: "12 Angry Men",
+    releaseDate: 1957,
+    rating: 6.2,
+    actors: ["Henry Fonda", "Lee J. Cobb", "Martin Balsam"]
+}];
 
 // ------------------------------------------------------------------------------ //
 // Opdracht 1a: Log het eerste object in de 'movies' array
@@ -114,29 +107,23 @@ console.log(movies[5].actors[2])
 console.log('------------------------------------------------------------------------------')
 // Opdracht 4a: Maak een if-else-statement die het woord 'Uitstekende film!!' logt,
 
-if (movies.rating >= 6) {
-    console.log('Okey film');
-} else {
-    if (movies.rating >= 8) {
-        console.log('goede film');
-    } else {
-        if (movies.rating > 8) {
-            console.log('Uitstekende film');
-
-        }
-    }
-}
+if (movies.rating !== 8) {
+    console.log('goede film');
+} else console.log('Uitstekende film');
 
 
+console.log('------------------------------------------------------------------------------')
 // wanneer een film een hoger cijfer krijgt dan een 8 en het woord 'Goede film!' logt, wanneer deze lager is.
 // Zorg dat je de onderstaande variabele gebruikt en pas eventueel het entry-nummer aan,
 // om te kijken of je algoritme ook werkt wanneer je een andere film selecteert!
 
-// const selectedMovie = movies[0];
-// for (movies.rating > 8 && movies)
-//     console.log(movies.rating)
+const selectedMovie = movies[3];
+if (selectedMovie.rating <= 8) {
+    console.log('Goede film');
+} else {
+    console.log('Uitstekend film');
+}
 
-console.log('------------------------------------------------------------------------------')
 // Verwacht antwoord bij 'const selectedMovie = movies[0]':
 // Uitstekende film!!
 
@@ -151,12 +138,29 @@ console.log('-------------------------------------------------------------------
 // Gebruik weer de variabele uit de vorige opdracht.
 // Tip: gebruik de && selector als het getal binnen twee condities moet vallen
 
+const selectedMovie = movies[0];
+if (movies.rating <= 5) {
+    console.log('Matige film');
+} else if (movies.rating < 8 && movies.rating >= 6) {
+    console.log('Kijktip!');
+} else {
+    if (movies.rating > 8) {
+        console.log('Topper!');
+    }
+}
 // Verwacht antwoord bij 'const selectedMovie = movies[0]':
 // Uitstekende film!!
 
+if (movies.rating > 7) {
+    console.log('Uitstekende film');
+}
 // Verwacht antwoord bij 'const selectedMovie = movies[3]':
 // Goede film!
-
+else if (movies.rating >= 7) {
+    console.log('Goede film');
+}
 // Verwacht antwoord bij 'const selectedMovie = movies[5]':
 // Matige film
-
+else if (movies.rating >= 5) {
+    console.log('Matige film');
+}
